@@ -27566,14 +27566,14 @@
 	.section	.rodata.java_type_name.4594,"aMS",%progbits,1
 	.type	.L.java_type_name.4594, %object
 .L.java_type_name.4594:
-	.asciz	"crc64a3a8ace75378dd16/SettingsFragment"
-	.size	.L.java_type_name.4594, 39
+	.asciz	"crc64a3a8ace75378dd16/SummaryFragment"
+	.size	.L.java_type_name.4594, 38
 
 	.section	.rodata.java_type_name.4595,"aMS",%progbits,1
 	.type	.L.java_type_name.4595, %object
 .L.java_type_name.4595:
-	.asciz	"crc64a3a8ace75378dd16/WifiReceiver"
-	.size	.L.java_type_name.4595, 35
+	.asciz	"crc64a3a8ace75378dd16/SummaryMonthsFragment"
+	.size	.L.java_type_name.4595, 44
 
 	.section	.rodata.java_type_name.4596,"aMS",%progbits,1
 	.type	.L.java_type_name.4596, %object
@@ -66402,13 +66402,13 @@
 	.section	.rodata.managed_type_name.4889,"aMS",%progbits,1
 	.type	.L.managed_type_name.4889, %object
 .L.managed_type_name.4889:
-	.asciz	"IWork.SettingsFragment, IWork"
-	.size	.L.managed_type_name.4889, 30
+	.asciz	"IWork.SummaryFragment, IWork"
+	.size	.L.managed_type_name.4889, 29
 	.section	.rodata.managed_type_name.4890,"aMS",%progbits,1
 	.type	.L.managed_type_name.4890, %object
 .L.managed_type_name.4890:
-	.asciz	"IWork.WifiReceiver, IWork"
-	.size	.L.managed_type_name.4890, 26
+	.asciz	"IWork.SummaryMonthsFragment, IWork"
+	.size	.L.managed_type_name.4890, 35
 	.section	.rodata.managed_type_name.4891,"aMS",%progbits,1
 	.type	.L.managed_type_name.4891, %object
 .L.managed_type_name.4891:

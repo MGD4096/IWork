@@ -17434,9 +17434,9 @@ map_java_to_managed:
 	.long	.L.java_type_name.1706
 	.long	0
 	.long	.L.java_type_name.1707
-	.long	.L.managed_type_name.1777
+	.long	0
 	.long	.L.java_type_name.1708
-	.long	.L.managed_type_name.1776
+	.long	0
 	.long	.L.java_type_name.1709
 	.long	.L.managed_type_name.1774
 	.long	.L.java_type_name.1710
@@ -21980,7 +21980,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.3979
 	.long	.L.managed_type_name.4192
 	.long	.L.java_type_name.3980
-	.long	.L.managed_type_name.4193
+	.long	0
 	.long	.L.java_type_name.3981
 	.long	0
 	.long	.L.java_type_name.3982
@@ -22772,7 +22772,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.4375
 	.long	.L.managed_type_name.4637
 	.long	.L.java_type_name.4376
-	.long	0
+	.long	.L.managed_type_name.4647
 	.long	.L.java_type_name.4377
 	.long	.L.managed_type_name.4645
 	.long	.L.java_type_name.4378
@@ -22798,7 +22798,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.4388
 	.long	.L.managed_type_name.4652
 	.long	.L.java_type_name.4389
-	.long	.L.managed_type_name.4654
+	.long	0
 	.long	.L.java_type_name.4390
 	.long	0
 	.long	.L.java_type_name.4391
@@ -22808,11 +22808,11 @@ map_java_to_managed:
 	.long	.L.java_type_name.4393
 	.long	.L.managed_type_name.4657
 	.long	.L.java_type_name.4394
-	.long	.L.managed_type_name.4659
+	.long	0
 	.long	.L.java_type_name.4395
 	.long	0
 	.long	.L.java_type_name.4396
-	.long	.L.managed_type_name.4661
+	.long	0
 	.long	.L.java_type_name.4397
 	.long	.L.managed_type_name.4662
 	.long	.L.java_type_name.4398
@@ -25146,7 +25146,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.5562
 	.long	.L.managed_type_name.2426
 	.long	.L.java_type_name.5563
-	.long	0
+	.long	.L.managed_type_name.2427
 	.long	.L.java_type_name.5564
 	.long	.L.managed_type_name.5842
 	.long	.L.java_type_name.5565
@@ -25164,7 +25164,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.5571
 	.long	.L.managed_type_name.5847
 	.long	.L.java_type_name.5572
-	.long	0
+	.long	.L.managed_type_name.2421
 	.long	.L.java_type_name.5573
 	.long	.L.managed_type_name.2422
 	.long	.L.java_type_name.5574
@@ -25226,7 +25226,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.5602
 	.long	.L.managed_type_name.6036
 	.long	.L.java_type_name.5603
-	.long	0
+	.long	.L.managed_type_name.2424
 	.long	.L.java_type_name.5604
 	.long	.L.managed_type_name.2423
 	.long	.L.java_type_name.5605
@@ -25234,7 +25234,7 @@ map_java_to_managed:
 	.long	.L.java_type_name.5606
 	.long	.L.managed_type_name.2432
 	.long	.L.java_type_name.5607
-	.long	0
+	.long	.L.managed_type_name.2433
 	.long	.L.java_type_name.5608
 	.long	.L.managed_type_name.2431
 	.long	.L.java_type_name.5609

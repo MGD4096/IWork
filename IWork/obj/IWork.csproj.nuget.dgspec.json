@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj": {}
+    "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj": {}
   },
   "projects": {
-    "E:\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj": {
+    "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj",
+        "projectUniqueName": "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj",
         "projectName": "IWork",
-        "projectPath": "E:\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj",
-        "packagesPath": "C:\\Users\\MateuszGrzymala\\.nuget\\packages\\",
-        "outputPath": "E:\\VisualStudioWorkspace\\IWork\\IWork\\obj\\",
+        "projectPath": "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj",
+        "packagesPath": "C:\\Users\\Mateusz Grzymała\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\MateuszGrzymala\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mateusz Grzymała\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

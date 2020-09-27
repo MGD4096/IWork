@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.iwork"
-	.size	.L.env.str.1, 22
+	.asciz	"it.mateuszgrzymala.iwork"
+	.size	.L.env.str.1, 25
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"5f54bda1-d1ca-4680-ab87-21fb00008756"
+	.asciz	"f327b98c-07f9-41b1-8fd5-7ea9e3c3909e"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

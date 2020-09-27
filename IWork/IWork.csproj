@@ -61,16 +61,15 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\MonthOfYeat.cs" />
+    <Compile Include="SummaryFragment.cs" />
     <Compile Include="HistoryFragment.cs" />
     <Compile Include="HomeFragment.cs" />
     <Compile Include="Models\ConnectingTime.cs" />
-    <Compile Include="Models\PickedNetwork.cs" />
-    <Compile Include="Models\WorkingTime.cs" />
-    <Compile Include="SettingsFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WifiReciever.cs" />
+    <Compile Include="SummaryMonthsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -132,17 +131,17 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\fragment_setting.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_home.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_history.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_summary.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
