@@ -12,8 +12,19 @@ using Android.Widget;
 
 namespace IWork.Models
 {
-    public class ConnectingTime
+    public class WorkEvent
     {
+        public WorkEvent()
+        {
+
+        }
+
+        public WorkEvent(string status, DateTime eventTime)
+        {
+            Status = status;
+            EventTime = eventTime;
+        }
+
         public long Id { get; set; }
         public string Status { get; set; }
         public DateTime EventTime { get; set; }

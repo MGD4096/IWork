@@ -41,8 +41,8 @@ namespace IWork
             btn.Click+=delegate {
                 RefreshGui(tv, tv2);
             };
-            db.CreateTable<Models.ConnectingTime>();
-            var list = db.Table<Models.ConnectingTime>().ToList();
+            db.CreateTable<Models.WorkEvent>();
+            var list = db.Table<Models.WorkEvent>().ToList();
             double count = 0;
             string lastState = "";
             if (list.Any(x => x.EventTime.ToString("dd.MM.yyyy") == DateTime.Now.ToString("dd.MM.yyyy") && x.Status == "Start"))
@@ -58,7 +58,7 @@ namespace IWork
 
 
                 }
-                ConnectingTime previousState = null;
+                WorkEvent previousState = null;
                 foreach (var dayHistory in TodayEvents)
                 {
                     if (previousState == null && dayHistory.Status == "Start")
@@ -104,8 +104,8 @@ namespace IWork
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
             using (var db = new SQLiteConnection(dbPath))
             {
-                db.CreateTable<Models.ConnectingTime>();
-                var a = db.Table<Models.ConnectingTime>().ToList().OrderByDescending(x => x.EventTime).FirstOrDefault();
+                db.CreateTable<Models.WorkEvent>();
+                var a = db.Table<Models.WorkEvent>().ToList().OrderByDescending(x => x.EventTime).FirstOrDefault();
                 var status = "Start";
                 if (a != null)
                 {
@@ -118,11 +118,7 @@ namespace IWork
                         status = "End";
                     }
                 }
-                db.Insert(new Models.ConnectingTime()
-                {
-                    EventTime = DateTime.Now,
-                    Status = status
-                });
+                db.Insert(new Models.WorkEvent(status,DateTime.Now));
                 db.Commit();
                 db.Close();
             }
@@ -132,12 +128,8 @@ namespace IWork
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
 
             var db = new SQLiteConnection(dbPath);
-            db.CreateTable<Models.ConnectingTime>();
-            db.Insert(new Models.ConnectingTime()
-            {
-                EventTime = DateTime.Now,
-                Status = "End"
-            });
+            db.CreateTable<Models.WorkEvent>();
+            db.Insert(new Models.WorkEvent("End",DateTime.Now));
             db.Commit();
             db.Close();
         }
@@ -147,8 +139,8 @@ namespace IWork
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
 
             var db = new SQLiteConnection(dbPath);
-            db.CreateTable<Models.ConnectingTime>();
-            var list = db.Table<Models.ConnectingTime>().ToList();
+            db.CreateTable<Models.WorkEvent>();
+            var list = db.Table<Models.WorkEvent>().ToList();
             double count = 0;
             string lastState = "";
             if (list.Any(x => x.EventTime.ToString("dd.MM.yyyy") == DateTime.Now.ToString("dd.MM.yyyy") && x.Status == "Start"))
@@ -164,7 +156,7 @@ namespace IWork
 
 
                 }
-                ConnectingTime previousState = null;
+                WorkEvent previousState = null;
                 foreach (var dayHistory in TodayEvents)
                 {
                     if (previousState == null && dayHistory.Status == "Start")

@@ -29,7 +29,7 @@ namespace IWork
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
             var db = new SQLiteConnection(dbPath);
-            var listOFWorkHistory = db.Table<Models.ConnectingTime>().ToList();
+            var listOFWorkHistory = db.Table<Models.WorkEvent>().ToList();
             var listOFWorkHistoryString =new List<string>();
             foreach (var item in listOFWorkHistory.OrderByDescending(x=>x.EventTime))
             {

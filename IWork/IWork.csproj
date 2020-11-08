@@ -65,7 +65,7 @@
     <Compile Include="SummaryFragment.cs" />
     <Compile Include="HistoryFragment.cs" />
     <Compile Include="HomeFragment.cs" />
-    <Compile Include="Models\ConnectingTime.cs" />
+    <Compile Include="Models\WorkEvent.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

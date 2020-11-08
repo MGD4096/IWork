@@ -30,10 +30,10 @@ namespace IWork
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
             List<DateTime> listOfDays = new List<DateTime>();
-            List<ConnectingTime> listOFWorkHistory = new List<ConnectingTime>();
+            List<WorkEvent> listOFWorkHistory = new List<WorkEvent>();
             using (var db = new SQLiteConnection(dbPath))
             {
-                listOFWorkHistory = db.Table<Models.ConnectingTime>().ToList();
+                listOFWorkHistory = db.Table<Models.WorkEvent>().ToList();
                 db.Close();
             }
             foreach (var Day in listOFWorkHistory)
@@ -49,7 +49,7 @@ namespace IWork
             {
                 var listOfDayHistory = listOFWorkHistory.Where(x => x.EventTime.Year == item.Year && x.EventTime.Month == item.Month && x.EventTime.Day == item.Day).OrderBy(x => x.EventTime);
                 double TotalTime = 0.0;
-                ConnectingTime previousState = null;
+                WorkEvent previousState = null;
                 foreach (var dayHistory in listOfDayHistory)
                 {
                     if (previousState == null&& dayHistory.Status=="Start")

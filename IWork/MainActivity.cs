@@ -148,8 +148,8 @@ namespace IWork
                             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "IWorkDb.db3");
                             using (var db = new SQLiteConnection(dbPath))
                             {
-                                db.CreateTable<Models.ConnectingTime>();
-                                var a = db.Table<Models.ConnectingTime>().ToList().Where(x=> x.EventTime.Day == DateTime.Now.Day && x.EventTime.Month == DateTime.Now.Month && x.EventTime.Year == DateTime.Now.Year).OrderByDescending(x => x.EventTime).FirstOrDefault();
+                                db.CreateTable<Models.WorkEvent>();
+                                var a = db.Table<Models.WorkEvent>().ToList().Where(x=> x.EventTime.Day == DateTime.Now.Day && x.EventTime.Month == DateTime.Now.Month && x.EventTime.Year == DateTime.Now.Year).OrderByDescending(x => x.EventTime).FirstOrDefault();
                                 var status = "Start";
                                 if (a != null)
                                 {
@@ -162,11 +162,7 @@ namespace IWork
                                         status = "End";
                                     }
                                 }
-                                db.Insert(new Models.ConnectingTime()
-                                {
-                                    EventTime = DateTime.Now,
-                                    Status = status
-                                });
+                                db.Insert(new Models.WorkEvent(status,DateTime.Now));
                                 db.Commit();
                                 db.Close();
                             }
