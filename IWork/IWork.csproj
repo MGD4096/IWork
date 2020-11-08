@@ -61,7 +61,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\MonthOfYeat.cs" />
+    <Compile Include="Models\MonthOfYear.cs" />
     <Compile Include="SummaryFragment.cs" />
     <Compile Include="HistoryFragment.cs" />
     <Compile Include="HomeFragment.cs" />
@@ -110,6 +110,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Nager.Date">
+      <Version>1.26.4</Version>
+    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>

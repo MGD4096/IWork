@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -11,10 +11,8 @@ using System.Linq;
 
 namespace IWork
 {
-    internal class SummaryMonthsFragment : Fragment
+    internal class SummaryMonthsFragment : Android.Support.V4.App.Fragment
     {
-        private ListView list;
-        private ArrayAdapter<String> adapter;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -38,7 +36,9 @@ namespace IWork
                     listOfDays.Add(new DateTime(Day.EventTime.Year, Day.EventTime.Month, Day.EventTime.Day));
                     if (!monthOfYears.Any(x => x.Month == Day.EventTime.Month && x.Year == Day.EventTime.Year))
                     {
-                        monthOfYears.Add(new MonthOfYear() { Month = Day.EventTime.Month, Year = Day.EventTime.Year });
+                        var mOY = new MonthOfYear(Day.EventTime.Month, Day.EventTime.Year);
+                        mOY.calculateWorkingHour();
+                        monthOfYears.Add(mOY);
                     }
                 }
             }
@@ -67,7 +67,8 @@ namespace IWork
                     }
                     totalTime += TotalTime;
                 }
-                listOFWorkHistoryString.Add(month.Month+"."+month.Year + " " + string.Format("{0:0.00}", totalTime) + "h");
+                var diff = (totalTime - month.WorkingHour);
+                listOFWorkHistoryString.Add(string.Format("{0:00}", month.Month)+"."+month.Year + "      " + string.Format("{0:000.00}", month.WorkingHour)+ "h     /     "+ string.Format("{0:000.00}", totalTime) + "h    /    " + string.Format("{0:0.00}", diff)+"h");
             }
 
             View rootView = inflater.Inflate(Resource.Layout.fragment_summary, container, attachToRoot: false);

@@ -25,13 +25,6 @@ namespace IWork
     {
         //TextView textMessage;
         private NfcAdapter mNfcAdapter;
-        RelativeLayout li;
-        private PendingIntent _pendingIntent;
-        private string[][] _techList = new string[][]{
-                 new[] { "android.nfc.tech.NdefFormatable" } ,
-                 new [] { "android.nfc.tech.NfcA" } ,
-                 new [] { "android.nfc.tech.Ndef" },
-                 new [] { "android.nfc.tech.Ndef" }};
         private bool readed = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,9 +34,9 @@ namespace IWork
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.SetOnNavigationItemSelectedListener(this);
             mNfcAdapter = NfcAdapter.GetDefaultAdapter(this);
-            loadFragment(new HomeFragment());
+            LoadFragment(new HomeFragment());
             var mIntent = Intent;
-            var tag = mIntent.GetParcelableExtra(NfcAdapter.ExtraTag) as Tag;
+            var tag = (Tag)mIntent.GetParcelableExtra(NfcAdapter.ExtraTag);
             if (tag != null)
             {
                 OnNewIntent(mIntent);
@@ -66,12 +59,12 @@ namespace IWork
                 }
                 mNfcAdapter.EnableForegroundDispatch(this, pendingIntent, filters, null);
             }
-            if (isNfcIntent(Intent)&&readed)
+            if (IsNfcIntent(Intent)&&readed)
             {
-                processIntent(Intent);
+                ProcessIntent(Intent);
                 readed = false;
             }
-            loadFragment(new HomeFragment());
+            LoadFragment(new HomeFragment());
             base.OnResume();
         }
         protected override void OnPause()
@@ -104,40 +97,40 @@ namespace IWork
         public bool OnNavigationItemSelected(IMenuItem item)
         {
 
-            Fragment selectedFragment = null;
+            Android.Support.V4.App.Fragment selectedFragment = null;
             switch (item.ItemId)
             {
                 case Resource.Id.navigation_home:
                     selectedFragment = new HomeFragment();
-                    loadFragment(selectedFragment);
+                    LoadFragment(selectedFragment);
                     return true;
                 case Resource.Id.navigation_events:
                     selectedFragment = new HistoryFragment();
-                    loadFragment(selectedFragment);
+                    LoadFragment(selectedFragment);
                     return true;
                 case Resource.Id.navigation_days:
                     selectedFragment = new SummaryFragment();
-                    loadFragment(selectedFragment);
+                    LoadFragment(selectedFragment);
                     return true;
                 case Resource.Id.navigation_months:
                     selectedFragment = new SummaryMonthsFragment();
-                    loadFragment(selectedFragment);
+                    LoadFragment(selectedFragment);
                     return true;
             }
 
-            loadFragment(selectedFragment);
+            LoadFragment(selectedFragment);
             return false;
         }
-        private void loadFragment(Fragment fragmewnt)
+        private void LoadFragment(Android.Support.V4.App.Fragment fragmewnt)
         {
-            this.FragmentManager.BeginTransaction().Replace(Resource.Id.container, fragmewnt).Commit();
+            this.SupportFragmentManager.BeginTransaction().Replace(Resource.Id.container, fragmewnt).Commit();
         }
-        private bool isNfcIntent(Intent intent)
+        private bool IsNfcIntent(Intent intent)
         {
-            var tag = intent.GetParcelableExtra(NfcAdapter.ExtraTag) as Tag;
+            var tag = (Tag)intent.GetParcelableExtra(NfcAdapter.ExtraTag);
             return tag != null;
         }
-        private void processIntent(Intent intent)
+        private void ProcessIntent(Intent intent)
         {
             var tag = intent.GetParcelableExtra(NfcAdapter.ExtraTag) as Tag;
             var rawMessages = intent.GetParcelableArrayExtra(NfcAdapter.ExtraNdefMessages);

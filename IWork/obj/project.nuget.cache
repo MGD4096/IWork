@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QHDROmocDAbV2TTX5B3sFwr57fbq/Z9lCNSrsIvx9mj0UozACT7rsenuy0By+/RDuo4xs+OD9AL4WKmEJpPpUw==",
+  "dgSpecHash": "BEosbrB0Ra0yg/RRnLH2mXzI5B7eJrr6p0/Lab5Zzpziorm9/F/YoqAO1ArNztyXkFvIcZYcQW6kb6edpeefYA==",
   "success": true,
   "projectFilePath": "D:\\Development\\VisualStudioWorkspace\\IWork\\IWork\\IWork.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Mateusz Grzymała\\.nuget\\packages\\nager.date\\1.26.4\\nager.date.1.26.4.nupkg.sha512",
     "C:\\Users\\Mateusz Grzymała\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\Mateusz Grzymała\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
     "C:\\Users\\Mateusz Grzymała\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",

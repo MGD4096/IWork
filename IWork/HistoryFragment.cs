@@ -14,10 +14,8 @@ using SQLite;
 
 namespace IWork
 {
-    public class HistoryFragment:Fragment
+    public class HistoryFragment: Android.Support.V4.App.Fragment
     {
-        private ListView list;
-        private ArrayAdapter<String> adapter;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

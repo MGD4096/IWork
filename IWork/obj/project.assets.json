@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "Nager.Date/1.26.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Nager.Date.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nager.Date.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.7.335": {
         "type": "package",
         "dependencies": {
@@ -852,6 +861,26 @@
     }
   },
   "libraries": {
+    "Nager.Date/1.26.4": {
+      "sha512": "JlIkEzZaNac3Y5uT4Ult924zVWbxgGLMlfLN/twSJ48RhyolNV5Znl9vhzheXarv4+luJpbakCgGjupnHe2Qhg==",
+      "type": "package",
+      "path": "nager.date/1.26.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "calendar.png",
+        "lib/net45/Nager.Date.dll",
+        "lib/net45/Nager.Date.xml",
+        "lib/net461/Nager.Date.dll",
+        "lib/net461/Nager.Date.xml",
+        "lib/netstandard2.0/Nager.Date.dll",
+        "lib/netstandard2.0/Nager.Date.xml",
+        "nager.date.1.26.4.nupkg.sha512",
+        "nager.date.nuspec",
+        "readme.txt"
+      ]
+    },
     "sqlite-net-pcl/1.7.335": {
       "sha512": "0A9YNPbp66aB+Sitxmh9lq1KDtD4+EBPfdtnYN8WenvQqh5dNgMxUV7kaEG6EXYTi4zBxcsDKpyYJzbViWJXtw==",
       "type": "package",
@@ -1797,6 +1826,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+      "Nager.Date >= 1.26.4",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
       "Xamarin.Android.Support.Design >= 28.0.0.3",
@@ -1844,6 +1874,10 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "Nager.Date": {
+            "target": "Package",
+            "version": "[1.26.4, )"
+          },
           "Xamarin.Android.Support.Core.Utils": {
             "target": "Package",
             "version": "[28.0.0.3, )"

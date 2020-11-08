@@ -15,10 +15,8 @@ using SQLite;
 
 namespace IWork
 {
-    public class SummaryFragment : Fragment
+    public class SummaryFragment : Android.Support.V4.App.Fragment
     {
-        private ListView list;
-        private ArrayAdapter<String> adapter;
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -64,15 +62,8 @@ namespace IWork
                         previousState = null;
                     }
                 }
-                listOFWorkHistoryString.Add(item.ToString("dd.MM.yyyy") + " " + string.Format("{0:0.00}", TotalTime) + "h");
-
-                //var StartTime = listOFWorkHistory.Where(x => x.EventTime.Year == item.Year && x.EventTime.Month == item.Month && x.EventTime.Day == item.Day).OrderBy(x => x.EventTime).Where(x => x.Status == "Start").FirstOrDefault();
-                //var EndTime = listOFWorkHistory.Where(x => x.EventTime.Year == item.Year && x.EventTime.Month == item.Month && x.EventTime.Day == item.Day).OrderBy(x => x.EventTime).Where(x => x.Status == "End").LastOrDefault();
-                //if (StartTime != null && EndTime != null)
-                //{
-                //    var hours = (EndTime.EventTime - StartTime.EventTime);
-                //    listOFWorkHistoryString.Add(item.ToString("dd.MM.yyyy") + " " + string.Format("{0:0.00}", hours.TotalHours) + "h");
-                //}
+                var diff = (TotalTime - 8.00);
+                listOFWorkHistoryString.Add(item.ToString("dd.MM.yyyy") + "     8.00h     /     " + string.Format("{0:0.00}", TotalTime) + "h    /    "+ string.Format("{0:0.00}", diff)+ "h");
             }
 
             View rootView = inflater.Inflate(Resource.Layout.fragment_summary, container, attachToRoot: false);

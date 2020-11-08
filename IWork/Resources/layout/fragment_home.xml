@@ -8,13 +8,13 @@
         android:text="@string/home_title"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:id="@+id/homeText" />
     <TextView
         android:text="@string/home_title2"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:id="@+id/homeText2" />
     <Button
         android:text="@string/home_start_btn"
@@ -30,5 +30,10 @@
         android:id="@+id/homeEndBtn"
         android:visibility="invisible"
         android:background="@android:color/transparent" />
+    <Button
+        android:text="@string/home_refresh_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeRefreshButton" />
 
 </LinearLayout>

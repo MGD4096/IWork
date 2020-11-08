@@ -583,3 +583,4 @@ D:\Development\VisualStudioWorkspace\IWork\IWork\obj\Debug\90\stamp\_GenerateJav
 D:\Development\VisualStudioWorkspace\IWork\IWork\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Development\VisualStudioWorkspace\IWork\IWork\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 D:\Development\VisualStudioWorkspace\IWork\IWork\obj\Debug\90\android\src\crc64a3a8ace75378dd16\SummaryMonthsFragment.java
+D:\Development\VisualStudioWorkspace\IWork\IWork\obj\Debug\90\android\assets\Nager.Date.dll

@@ -2,7 +2,7 @@ package crc64a3a8ace75378dd16;
 
 
 public class HomeFragment
-	extends android.app.Fragment
+	extends android.support.v4.app.Fragment
 	implements
 		mono.android.IGCUserPeer
 {
